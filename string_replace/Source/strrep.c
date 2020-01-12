@@ -9,7 +9,7 @@
 
 /** appendstr (Append String). Appends the string 'append' to the string 'string'.
  * @param string The string in which append the new text.
- * @param append The new strint to append.
+ * @param append The new string to append.
  * @return returns a new string with the appended text.
  */
 char * appendstr(char * string, const char * append) {
