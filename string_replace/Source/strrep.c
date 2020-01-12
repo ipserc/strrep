@@ -45,7 +45,7 @@ char * strtokk(char * string, const char * strf) {
 }
 
 /**
- * strrrep (String Replace). Replaces 'strf' with 'strr' in 'cadena' and returns the new string.
+ * strrep (String Replace). Replaces 'strf' with 'strr' in 'cadena' and returns the new string.
  * You need to free the returned string in your code after using strrep.
  * @param cadena The string with the text.
  * @param strf The text to find.
