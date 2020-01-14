@@ -31,6 +31,7 @@ char * strtokk(char * string, const char * strf) {
 	static char * ptr;
 	static char * ptr2;
 
+	if (!*strf) return string;
 	if (string) ptr = string;
 	else {
 		if (!ptr2) return ptr2;
@@ -39,7 +40,7 @@ char * strtokk(char * string, const char * strf) {
 
 	if (ptr) {
 		ptr2 = strstr(ptr, strf);
-		if (ptr2) memset(ptr2, 0, (size_t)strlen(strf));
+		if (ptr2) memset(ptr2, 0, strlen(strf));
 	}
 	return ptr;
 }
@@ -59,6 +60,7 @@ char * strrep(const char * cadena, const char * strf, const char * strr) {
 
 	string = (char *)malloc(strlen(cadena));
 	sprintf(string, "%s", cadena);
+	if (!*strf) return string;
 	ptr = strtokk(string, strf);
 	strrep = malloc(strlen(ptr));
 	memset(strrep, 0, strlen(ptr));

@@ -48,6 +48,21 @@ void caso2(void) {
 	newCadena = strrep(cadena, "temer", "hacer");
 	printf("Sust  :%s:\n", newCadena);
 	free(newCadena);
+
+	printf("Cadena:%s:\n", cadena);
+	newCadena = strrep(cadena, "temer", "");
+	printf("Sust  :%s:\n", newCadena);
+	free(newCadena);
+
+	printf("Cadena:%s:\n", cadena);
+	newCadena = strrep(cadena, "", "hacer");
+	printf("Sust  :%s:\n", newCadena);
+	free(newCadena);
+
+	printf("Cadena:%s:\n", cadena);
+	newCadena = strrep(cadena, " ", "");
+	printf("Sust  :%s:\n", newCadena);
+	free(newCadena);
 }
 
 void main (void) {
