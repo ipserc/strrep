@@ -8,64 +8,62 @@
 
 #include "strrep.h"
 
+void do_strrep(const char * cadena, const char * strf, const char * strr) {
+	char * newCadena;
+
+	printf("Look for \"%s\" and replace with \"%s\"\n", strf, strr);
+	printf("Text    :%s:\n", cadena);
+	newCadena = strrep(cadena, strf, strr);
+	printf("Replaced:%s:\n\n", newCadena);
+	free(newCadena);
+}
+
 void caso1(void) {
 	char cadena[200] = "R&B\\/Soul\\/Funk";
 	char * newCadena;
 
-	printf("Cadena:%s:\n", cadena);
+	puts("Example 1");
+	puts("---------");
+	printf("Text     :%s:\n", cadena);
 
 	newCadena = strrep(cadena, "\\/", "/");
-	printf("Sust  :%s:\n", newCadena);
+	printf("Replaced1:%s:\n", newCadena);
 	free(newCadena);
 
 	newCadena = strrep(cadena, "\\/", "/");
 	newCadena = strrep(newCadena, "unk", "unkie");
-	printf("Sust  :%s:\n", newCadena);
+	printf("Replaced2:%s:\n", newCadena);
 	free(newCadena);
 
 }
 
 void caso2(void) {
 	char cadena[200] = "El ánimo de pensar en lo que se puede temer, conduce a temer en lo que se puede pensar";
-	char * newCadena;
 
-	printf("Cadena:%s:\n", cadena);
-	newCadena = strrep(cadena, "e", "3");
-	printf("Sust  :%s:\n", newCadena);
-	free(newCadena);
+	puts("Example 2");
+	puts("---------");
+	do_strrep(cadena, "e", "3");
+	do_strrep(cadena, "r", "RrRr");
+	do_strrep(cadena, "pensar", "creer");
+	do_strrep(cadena, "temer", "hacer");
+	do_strrep(cadena, "temer", "");
+	do_strrep(cadena, "", "hacer");
+	do_strrep(cadena, " ", "");
+	do_strrep(cadena, "something", "");
+	do_strrep(cadena, " ", "_|_");
 
-	printf("Cadena:%s:\n", cadena);
-	newCadena = strrep(cadena, "r", "RrRr");
-	printf("Sust  :%s:\n", newCadena);
-	free(newCadena);
-
-	printf("Cadena:%s:\n", cadena);
-	newCadena = strrep(cadena, "pensar", "creer");
-	printf("Sust  :%s:\n", newCadena);
-	free(newCadena);
-
-	printf("Cadena:%s:\n", cadena);
-	newCadena = strrep(cadena, "temer", "hacer");
-	printf("Sust  :%s:\n", newCadena);
-	free(newCadena);
-
-	printf("Cadena:%s:\n", cadena);
-	newCadena = strrep(cadena, "temer", "");
-	printf("Sust  :%s:\n", newCadena);
-	free(newCadena);
-
-	printf("Cadena:%s:\n", cadena);
-	newCadena = strrep(cadena, "", "hacer");
-	printf("Sust  :%s:\n", newCadena);
-	free(newCadena);
-
-	printf("Cadena:%s:\n", cadena);
-	newCadena = strrep(cadena, " ", "");
-	printf("Sust  :%s:\n", newCadena);
-	free(newCadena);
 }
 
-void main (void) {
+int main (void) {
+	puts("+--------------------------------------+");
+	puts("|                                      |");
+	puts("| strrep examples of use               |");
+	puts("|                                      |");
+	puts("+--------------------------------------+");
+	puts("");
 	caso1();
+	puts("                  -------------------------------");
 	caso2();
+
+	return 0;
 }
