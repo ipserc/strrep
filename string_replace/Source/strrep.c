@@ -22,7 +22,7 @@ char * appendstr(char * string, const char * append) {
 
 /**
  * strtokk (String Tokenizer). Breaks string 'string' into a series of tokens using 'strf' as a WHOLE DELIMITER string.
- * It works in the same way of strtok, so the 'string' passed as parameter is split in the different parts.
+ * It works in the same way as strtok, so the 'string' passed as parameter is split in the different parts, breaking the 'string'.
  * @param string The contents of this string are modified and broken into smaller strings (tokens).
  * @param strf This is the C string containing the DELIMITER.
  * @return Returns a pointer to the first token found in the string. A null pointer is returned if there are no tokens left to retrieve.
