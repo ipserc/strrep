@@ -58,7 +58,7 @@ char * strrep(const char * cadena, const char * strf, const char * strr) {
 	char * ptr;
 	char * strrep;
 
-	string = (char *)malloc(strlen(cadena));
+	string = (char *)malloc(strlen(cadena)+1);
 	sprintf(string, "%s", cadena);
 	if (!*strf) return string;
 	ptr = strtokk(string, strf);

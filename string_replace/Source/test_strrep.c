@@ -11,7 +11,7 @@
 void do_strrep(const char * cadena, const char * strf, const char * strr) {
 	char * newCadena;
 
-	printf("Look for \"%s\" and replace with \"%s\"\n", strf, strr);
+	printf("Search \"%s\" and replace it with \"%s\"\n", strf, strr);
 	printf("Text    :%s:\n", cadena);
 	newCadena = strrep(cadena, strf, strr);
 	printf("Replaced:%s:\n\n", newCadena);
@@ -30,7 +30,7 @@ void caso1(void) {
 	printf("Replaced1:%s:\n", newCadena);
 	free(newCadena);
 
-	newCadena = strrep(cadena, "\\/", "/");
+	newCadena = strrep(cadena, "\\", "");
 	newCadena = strrep(newCadena, "unk", "unkie");
 	printf("Replaced2:%s:\n", newCadena);
 	free(newCadena);
@@ -55,14 +55,14 @@ void caso2(void) {
 }
 
 int main (void) {
-	puts("+--------------------------------------+");
-	puts("|                                      |");
-	puts("| strrep examples of use               |");
-	puts("|                                      |");
-	puts("+--------------------------------------+");
+	puts("+---------------------------------------+");
+	puts("|                                       |");
+	puts("| strrep examples of use                |");
+	puts("|                                       |");
+	puts("+---------------------------------------+");
 	puts("");
 	caso1();
-	puts("                  -------------------------------");
+	puts("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 	caso2();
 
 	return 0;
