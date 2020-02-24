@@ -58,11 +58,11 @@ char * strrep(const char * cadena, const char * strf, const char * strr) {
 	char * ptr;
 	char * strrep;
 
-	string = (char *)malloc(strlen(cadena)+1);
+	string = (char *)malloc(strlen(cadena) + 1);
 	sprintf(string, "%s", cadena);
 	if (!*strf) return string;
 	ptr = strtokk(string, strf);
-	strrep = malloc(strlen(ptr));
+	strrep = malloc(strlen(ptr) + 1);
 	memset(strrep, 0, strlen(ptr));
 	while (ptr) {
 		strrep = appendstr(strrep, ptr);
