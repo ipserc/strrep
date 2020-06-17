@@ -59,6 +59,10 @@ void caso3(void) {
 	puts("Example 3");
         puts("---------");
         do_strrep(cadena, "e", "3");
+        do_strrep(cadena, "", "3");
+        do_strrep(cadena, "e", "");
+        do_strrep(cadena, "", "");
+
 }
 
 
