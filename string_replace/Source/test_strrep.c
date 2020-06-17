@@ -54,6 +54,14 @@ void caso2(void) {
 
 }
 
+void caso3(void) {
+	char cadena[200] = "";
+	puts("Example 3");
+        puts("---------");
+        do_strrep(cadena, "e", "3");
+}
+
+
 int main (void) {
 	puts("+---------------------------------------+");
 	puts("|                                       |");
@@ -64,6 +72,7 @@ int main (void) {
 	caso1();
 	puts("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 	caso2();
-
+        puts("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+	caso3();
 	return 0;
 }

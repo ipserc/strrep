@@ -63,7 +63,7 @@ char * strrep(const char * cadena, const char * strf, const char * strr) {
 	if (!*strf) return string;
 	ptr = strtokk(string, strf);
 	strrep = malloc(strlen(ptr) + 1);
-	memset(strrep, 0, strlen(ptr));
+	memset(strrep, 0, strlen(ptr) + 1);
 	while (ptr) {
 		strrep = appendstr(strrep, ptr);
 		ptr = strtokk(NULL, strf);
