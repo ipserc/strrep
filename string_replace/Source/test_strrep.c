@@ -43,6 +43,9 @@ void caso2(void) {
 	puts("Example 2");
 	puts("---------");
 	do_strrep(cadena, "e", "3");
+	do_strrep(cadena, "", "3");
+        do_strrep(cadena, "e", "");
+        do_strrep(cadena, "", "");
 	do_strrep(cadena, "r", "RrRr");
 	do_strrep(cadena, "pensar", "creer");
 	do_strrep(cadena, "temer", "hacer");
